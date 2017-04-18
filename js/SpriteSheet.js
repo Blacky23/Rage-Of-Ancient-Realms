@@ -22,6 +22,6 @@ function create() {
     //  And this starts the animation playing by using its key ("walk")
     //  30 is the frame rate (30fps)
     //  true means it will loop when it finishes
-    mummy.animations.play('walk', 30, true);
+    mummy.animations.play('walk', 10, true);
 
 }
