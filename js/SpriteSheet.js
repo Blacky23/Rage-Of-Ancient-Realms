@@ -25,3 +25,8 @@ function create() {
     mummy.animations.play('walk', 10, true);
 
 }
+function update() {
+
+    parent.x += 0.1;
+    child.x += 0.1;
+}
