@@ -8,12 +8,12 @@ function preload() {
     //  blank frames at the end, so we tell the loader how many to load
 
     game.load.spritesheet('mummy', 'assets/sprites/metalslug_mummy37x45.png', 37, 45, 18);
+    
+    game.load.spritesheet('girl' , 'assets' )
 
 }
 
 function create() {
-
-    var mummy = game.add.sprite(300, 200, 'mummy');
 
     //  Here we add a new animation called 'walk'
     //  Because we didn't give any other parameters it's going to make an animation from all available frames in the 'mummy' sprite sheet
@@ -22,6 +22,9 @@ function create() {
     //  And this starts the animation playing by using its key ("walk")
     //  30 is the frame rate (30fps)
     //  true means it will loop when it finishes
-    mummy.animations.play('walk', 30, true);
-
+    mummy.animations.play('walk', 10, true);
+    
+    var walk = girl.animations.add('walk');
+    
+    girl.animations.play('walk', 10, true)
 }
