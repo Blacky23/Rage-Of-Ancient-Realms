@@ -23,8 +23,17 @@ function create() {
     //  30 is the frame rate (30fps)
     //  true means it will loop when it finishes
     mummy.animations.play('walk', 10, true);
+<<<<<<< HEAD
     
     var walk = girl.animations.add('walk');
     
     girl.animations.play('walk', 10, true)
+=======
+
+}
+function update() {
+
+    parent.x += 0.1;
+    child.x += 0.1;
+>>>>>>> Branden
 }
