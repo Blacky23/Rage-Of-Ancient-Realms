@@ -7,9 +7,9 @@ function preload() {
     //  There are 18 frames in the PNG - you can leave this value blank if the frames fill up the entire PNG, but in this case there are some
     //  blank frames at the end, so we tell the loader how many to load
 
-    game.load.spritesheet('mummy', 'assets/sprites/metalslug_mummy37x45.png', 37, 45, 18);
+    game.load.spritesheet('mummy', 'assets/sprite/mummy.png', 37, 45, 18);
     
-    game.load.spritesheet('girl' , 'assets' )
+    game.load.spritesheet('girl' , 'assets/sprite/spitestrip.png' , 304, 255, 190);
 
 }
 
