@@ -9,22 +9,24 @@ function preload() {
 
     game.load.spritesheet('mummy', 'assets/sprite/mummy.png', 37, 45, 18);
     
-    game.load.spritesheet('girl' , 'assets/sprite/spitestrip.png' , 304, 255, 190);
+    game.load.spritesheet('girl', 'assets/sprite/girl.png', 304, 255, 190);
+
+
+
 
 }
 
+
 function create() {
-
-    //  Here we add a new animation called 'walk'
-    //  Because we didn't give any other parameters it's going to make an animation from all available frames in the 'mummy' sprite sheet
+    
     var walk = mummy.animations.add('walk');
-
-    //  And this starts the animation playing by using its key ("walk")
-    //  30 is the frame rate (30fps)
-    //  true means it will loop when it finishes
-    mummy.animations.play('walk', 10, true);
+    
+     mummy.animations.play('walk', 10, true);
+    
     
     var walk = girl.animations.add('walk');
     
-    girl.animations.play('walk', 10, true)
+    girl.animations.play('walk', 10, true);
+    
+
 }
