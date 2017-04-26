@@ -15,27 +15,21 @@
             //  Although it will work fine with this tutorial, it's almost certainly not the most current version.
             //  Be sure to replace it with an updated version before you start experimenting with adding your own code.
 
-            var game = new Phaser.Game(800, 600, Phaser.AUTO, '', { preload: preload, create: create });
+            var game = new Phaser.Game(800, 600, Phaser.AUTO, 'mummy', { preload: preload, create: create });
 
-            function preload () {
-
-<<<<<<< HEAD
-            game.load.image('logo', 'phaser.png');
+            function preload () 
+            game.load.image('mummy', 'mummy.png');
             game.load.spritesheet('mummy', 'images/sprite/mummy.png', 37, 45, 18);
             game.load.spritesheet('girl', 'images/sprite/spritestrip.png', 304, 255, 190);
-        }
-=======
-                game.load.image('logo', 'phaser.png');
-                game.load.spritesheet('mummy', 'images/sprite/mummy.png', 37, 45, 18);
+        
             }
->>>>>>> Branden
 
-            function create () {
-
-<<<<<<< HEAD
+     function create () {
+                
             var mummy = game.add.sprite(game.world.centerX, game.world.centerY, 'mummy');
             mummy.anchor.setTo(0.5, 0.5);
-            
+
+    
            
    //var lol = game.add.sprite(10, 10, 'mummy');
             
@@ -44,6 +38,9 @@
     //  Because we didn't give any other parameters it's going to make an animation from all available frames in the 'mummy' sprite sheet
     var walk = mummy.animations.add('walk');
     
+    var mummy = game.add.sprite.(game.world.centerX, game.world.centerY, 'mummy');
+            girl.anchor.setTo(0.5,0.5) ;
+         
     var girl = game.add.sprite(game.world.centerX, game.world.centerY, 'girl');
             girl.anchor.setTo(0.7,0.7) ;
     
@@ -52,13 +49,13 @@
     //  30 is the frame rate (30fps)
     //  true means it will loop when it finishes
    
-    girl.animations.play('walk'), 10, true) ;        
+    girl.animations.play('walk', 10, true) ;        
             
     mummy.animations.play('walk', 10, true) ;
     
-        }
-=======
-                var mummy = game.add.sprite(game.world.centerX, game.world.centerY, 'mummy');
+    
+
+    var mummy = game.add.sprite(game.world.centerX, game.world.centerY, 'mummy');
                 mummy.anchor.setTo(0.5, 0.5);
                 mummy.scale.setTo(2, 2);
                 //sprite = game.add.tileSprite(0, 0, 800, 600, 'mummy');
@@ -70,17 +67,15 @@
     //  Here we add a new animation called 'walk'
     //  Because we didn't give any other parameters it's going to make an animation from all available frames in the 'mummy' sprite sheet
     var walk = mummy.animations.add('walk');
->>>>>>> Branden
+
 
     //  And this starts the animation playing by using its key ("walk")
     //  30 is the frame rate (30fps)
     //  true means it will loop when it finishes
     mummy.animations.play('walk', 10, true);
                  child = parent.addChild(game.make.sprite(100, 100, 'mummy'));
-}
             
-
-        };
+     }
 
 
             function update() {
@@ -99,13 +94,13 @@
 
     }
 
-                </script>
+                
 
 
     function render() {
 
-        // game.debug.renderText(sprite.frame, 32, 32);
+    game.debug.renderText(sprite.frame, 32, 32);
 
     }
-
+ </script>
     </html>
