@@ -17,11 +17,18 @@
 
             var game = new Phaser.Game(800, 600, Phaser.AUTO, 'mummy', { preload: preload, create: create });
 
+<<<<<<< HEAD
             function preload () 
             game.load.image('mummy', 'mummy.png');
             game.load.spritesheet('mummy', 'images/sprite/mummy.png', 37, 45, 18);
             game.load.spritesheet('girl', 'images/sprite/spritestrip.png', 304, 255, 190);
         
+=======
+            function preload () {
+
+                game.load.image('logo', 'phaser.png');
+                game.load.spritesheet('mummy', 'images/sprite/walkingtrooper.png', 70, 70, 70);
+>>>>>>> Branden
             }
 
      function create () {
