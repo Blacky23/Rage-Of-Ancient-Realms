@@ -20,6 +20,7 @@ function preload() {
 function create() {
     
     var walk = mummy.animations.add('walk');
+<<<<<<< HEAD
     
      mummy.animations.play('walk', 10, true);
     
@@ -28,5 +29,20 @@ function create() {
     
     girl.animations.play('walk', 10, true);
     
+=======
+
+    //  And this starts the animation playing by using its key ("walk")
+    //  30 is the frame rate (30fps)
+    //  true means it will loop when it finishes
+    mummy.animations.play('walk', 10, true);
+    var walk = girl.animations.add('walk');
+    
+    girl.animations.play('walk', 10, true)
+
+}
+function update() {
+
+    parent.x += 0.1;
+>>>>>>> origin/master
 
 }
