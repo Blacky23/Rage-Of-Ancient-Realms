@@ -29,11 +29,28 @@
         var mummy = game.add.sprite(game.world.centerX, game.world.centerY, 'mummy');
         mummy.anchor.setTo(0.5, 0.5);
 
+<<<<<<< HEAD
         var girl = game.add.sprite(game.world.centerX, game.world.centerY, 'girl');
+=======
+                game.load.image('logo', 'phaser.png');
+                game.load.spritesheet('mummy', 'images/sprite/walkingtrooper.png', 64, 64, 17);
+            }
+>>>>>>> Branden
 
         girl.anchor.setTo(0.7, 0.7);
 
+<<<<<<< HEAD
         var walk = girl.animations.add('walk');
+=======
+                var mummy = game.add.sprite(game.world.centerX, game.world.centerY, 'mummy');
+                mummy.anchor.setTo(0.5, 0.5);
+                mummy.scale.setTo(2, 2);
+                //sprite = game.add.tileSprite(0, 0, 800, 600, 'mummy');
+                mummy.animations.add('walk');
+                mummy.animations.play('walk', 20, true);
+                //mummy.anchor.setTo(0.5, 0.5);
+               
+>>>>>>> Branden
 
         girl.animations.play('walk', 10, true);        
           
