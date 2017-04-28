@@ -21,13 +21,18 @@
     function preload () {
         game.load.spritesheet('mummy', 'images/sprite/mummy.png', 37, 45, 18);
         game.load.spritesheet('girl', 'images/sprite/girl.png', 304, 255, 190);
-        
+       
         game.load.tilemap('map', 'images/ROARmap1.json', null, Phaser.Tilemap.TILED_JSON);
         game.load.image('tiles', 'images/CastleExample.png');
         game.load.image('tiles2','images/base_out_atlas.png');
         game.load.image('tiles3','images/terrain_atlas.png');
     }
-
+        
+        var map;
+        var layer;
+        var layerColision;
+        
+        
     function create () { 
 
         var girl = game.add.sprite(game.world.centerX, game.world.centerY, 'girl');
@@ -73,8 +78,18 @@
         map.addTilesetImage('life', 'tiles3')
         layer = map.createLayer('Tile Layer 1');
         layer = map.createLayer('Tile Layer 2');
-        layerColision = map.createLayer('colision');
-        map.setCollision(6, true, 'colision');
+        //layerColision = map.createLayer('colision');
+        //map.setCollision(6, true, 'colision');
+        map.setCollision(5);
+        map.setCollision(6);
+        map.setCollision(10);
+        map.setCollision(11);
+        map.setCollision(13);
+        map.setCollision(24);
+        map.setCollision(22);
+       
+        //map.setCollision(6, true, 'colision');
+        //layer.debug = true;
         layer.resizeWorld(); 
     }
 
