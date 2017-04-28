@@ -23,9 +23,10 @@
         game.load.spritesheet('girl', 'images/sprite/girl.png', 304, 255, 190);
        
         game.load.tilemap('map', 'images/ROARmap1.json', null, Phaser.Tilemap.TILED_JSON);
-        game.load.image('tiles', 'images/CastleExample.png');
-        game.load.image('tiles2','images/base_out_atlas.png');
-        game.load.image('tiles3','images/terrain_atlas.png');
+        game.load.image('tiles', 'images/TileSets/CastleExample.png');
+        game.load.image('tiles2','images/TileSets/base_out_atlas.png');
+        game.load.image('tiles3','images/Tilesets/?terrain_atlas.png');
+        game.load.image('tiles4', 'images/TileSets/NewTileStuff')
     }
         
         var map;
@@ -75,7 +76,8 @@
         map.addTilesetImage('CastleExample', 'tiles');
         map.addTilesetImage('life', 'tiles2');
         map.addTilesetImage('base_out_atlas', 'tiles2');
-        map.addTilesetImage('life', 'tiles3')
+        map.addTilesetImage('life', 'tiles3');
+        map.addTilesetImage('TileStuff', 'tiles4');
         layer = map.createLayer('Tile Layer 1');
         layer = map.createLayer('Tile Layer 2');
         //layerColision = map.createLayer('colision');
