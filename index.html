@@ -98,6 +98,7 @@
         soldier = game.add.sprite(10, 400, 'soldier'); 
         var walk = soldier.animations.add('walk');
         soldier.animations.play('walk', 40, true);
+        
     }
 
     function update() {
@@ -110,7 +111,7 @@
         //sprite.x += 1;
         //sprite.y += 1;
         
-    
+        soldier.x+= 1;
         if(mummy.x < 750) {
             mummy.x += 2;
             //mummy.y += 2;
