@@ -27,29 +27,17 @@
         game.load.tilemap('map', 'images/ROARmap1.json', null, Phaser.Tilemap.TILED_JSON);
         game.load.image('tiles', 'images/TileSets/CastleExample.png');
         game.load.image('tiles2','images/TileSets/base_out_atlas.png');
-        game.load.image('tiles3','images/TileSets/terrain_atlas.png');
-        game.load.image('tiles4', 'images/TileSets/NewTileStuff.png')
+        game.load.image('tiles3','images/Tilesets/?terrain_atlas.png');
+        game.load.image('tiles4', 'images/TileSets/NewTileStuff')
     }
         
         var map;
-        var layerBG;
-        var layerFG;
+        var layer;
         var layerColision;
         
         
     function create () { 
 
-        map = game.add.tilemap('map');
-        map.addTilesetImage('CastleExample', 'tiles');
-        map.addTilesetImage('life', 'tiles2');
-        map.addTilesetImage('base_out_atlas', 'tiles2');
-        map.addTilesetImage('life', 'tiles3');
-        map.addTilesetImage('Tilestuff', 'tiles4');
-        layerBG = map.createLayer('Tile Layer 1');
-        layerFG = map.createLayer('Tile Layer 2');
-        
-        map.setCollisionByExclusion([0], true, 'Tile Layer 2');
-        
         var girl = game.add.sprite(game.world.centerX, game.world.centerY, 'girl');
 
          mummy = game.add.sprite(game.world.centerX, game.world.centerY, 'mummy');
@@ -86,8 +74,14 @@
     //  child = parent.addChild(game.make.sprite(100, 100, 'mummy'));
         girl.animations.play('walk', 10, true);
         
-        game.physics.arcade.enable(mummy);
-        
+        map = game.add.tilemap('map');
+        map.addTilesetImage('CastleExample', 'tiles');
+        map.addTilesetImage('life', 'tiles2');
+        map.addTilesetImage('base_out_atlas', 'tiles2');
+        map.addTilesetImage('life', 'tiles3');
+        map.addTilesetImage('TileStuff', 'tiles4');
+        layer = map.createLayer('Tile Layer 1');
+        layer = map.createLayer('Tile Layer 2');
         //layerColision = map.createLayer('colision');
         //map.setCollision(6, true, 'colision');
         map.setCollision(5);
@@ -110,7 +104,7 @@
     }
 
     function update() {
-        game.physics.arcade.collide(mummy, layerFG);
+
         //count += 0.005;
 
         //sprite.tileScale.x = 2 + Math.sin(count);
